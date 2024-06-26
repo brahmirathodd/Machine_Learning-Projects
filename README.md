@@ -47,7 +47,3 @@ To replicate the analysis:
 2. Install the required dependencies specified in `requirements.txt`.
 3. Run the analysis scripts in the `scripts/` directory using Python.
 4. Review the results and findings to gain insights into the insurance claims data.
-
-
-## Contact
-For any questions or inquiries, please contact Brahmi Rathod.
