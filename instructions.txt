@@ -1,0 +1,23 @@
+step1:create azure function app through vscode
+step2:create a azure function in that function app
+step3: deploy the fucntions created into the cloud
+step4: Create a resource group
+step5: create azure data factory
+step6: create a factory_resources>>pipelines>>new_pipeline
+step7: drag and drop a azure function
+step8: create a azure function linked service>>azure subscription>> function app url
+step9: function name : name of the function created; method : Get
+step10: drag and drop webactivity onto the datafactory panel
+step11: storageaccount>>Data Storage>> containers>> create a new container
+step12: web activity>> settings>>url =(path to container)+ /file_name.json
+step13: method = put
+step14: body = @activity('Azure Function1').output.Response
+step15: give access to the storage account
+step16:Authentication = System Assigned Managed Identity
+step17: Resource= https://storage.azure.com/
+step18: Headers = x-ms-blob-type:BlockBlob;x-ms-version:2017-11-09
+step19: create a copy activity
+step20: copy activity>>source>>create a newlinkedservice for blobstorage>json dataset
+step21: copy activity>>sink>>blobstorage>create a csv dataset>>give the path to the dataset
+step22: copy activity>>mapping>> import schemas
+step
