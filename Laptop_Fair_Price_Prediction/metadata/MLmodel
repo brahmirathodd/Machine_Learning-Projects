@@ -1,0 +1,35 @@
+artifact_path: model
+databricks_runtime: 15.3.x-cpu-ml-scala2.12
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.3.0
+mlflow_version: 2.11.3
+model_size_bytes: 215145
+model_uuid: eb4719dac73c47899d92c61b4d54664f
+run_id: 8bc9c22aadd044b7b0fd1b4402ef583e
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  type: dataframe
+signature:
+  inputs: '[{"type": "float", "name": "ratings", "required": true}, {"type": "string",
+    "name": "processor", "required": true}, {"type": "string", "name": "ram", "required":
+    true}, {"type": "string", "name": "operating_system", "required": true}, {"type":
+    "string", "name": "rom", "required": true}, {"type": "string", "name": "display",
+    "required": true}, {"type": "string", "name": "brand", "required": true}, {"type":
+    "string", "name": "ram_type", "required": true}, {"type": "string", "name": "rom_type",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-08-06 16:13:56.608982'
